@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style type="text/css">
+            body{
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 text-align: center;
+                 height: 100vh;
+                 text-transform:capitalize;
+                 margin: 0;
+                 background: linear-gradient(to right, red, green) ;                
+            }
+            
+            
+              
+        </style>
+    </head>
+    
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="centerr">
+        <h3 class="capitalize">background generator</h3>
+        <input type="color" class="color1" value="#ff0000">
+        <input type="color" class="color2" value="#00ff11">
+        
+        <script  async defer>
+            var color1 = document.querySelector(".color1");
+            var color2 = document.querySelector(".color2");
+            var css = document.querySelector("body");
+
+            function generator(){
+                 css.style.background = "linear-gradient(to right, " 
+                 + color1.value + ", " + color2.value + ")" ; 
+
+            }
+
+
+            color1.addEventListener("input" , generator)
+            color2.addEventListener("input" , generator)
+            
+            
+
+    
+        </script>
+    </div>
+    </body>
+</html>
