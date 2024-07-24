@@ -24,9 +24,7 @@
             }
 
 
-            body{
-                
-            }
+          
             
             
               
@@ -37,23 +35,29 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        Lorem ipsum dolor sit amet consectetur.
+
     <div class="centerr">
         <h3 class="capitalize">background generator</h3>
         <input type="color" class="color1" value="#ff0000">
         <input type="color" class="color2" value="#00ff11">
-        
+
+       
+         <p><span class="colorcode"></span></p>
         <script  async defer>
             var color1 = document.querySelector(".color1");
             var color2 = document.querySelector(".color2");
             var css = document.querySelector("body");
+            var colorcode = document.querySelector("p");
 
             function generator(){
                  css.style.background = "linear-gradient(to right, " 
                  + color1.value + ", " + color2.value + ")" ; 
 
-            }
+                 colorcode.textContent = css.style.background ; 
 
+            }
+           
+          
 
             color1.addEventListener("input" , generator)
             color2.addEventListener("input" , generator)
